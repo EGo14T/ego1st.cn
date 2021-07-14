@@ -4,6 +4,12 @@ import Layout from "@theme/Layout";
 function BlogSidebar(props) {
   console.log(props);
 
-  return <div style={{backgroundColor: "red", width:"315px"}}>123==============</div>;
+  return (
+    <aside className="sidebar">
+      <div className="sidebar-inner">
+        <div>123</div>
+      </div>
+    </aside>
+  );
 }
 export default BlogSidebar;

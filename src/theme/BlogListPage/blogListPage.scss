@@ -1,0 +1,110 @@
+.main-wrapper {
+  position: relative;
+}
+
+.header {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header-inner {
+  position: relative;
+  width: 100%;
+  height: 750px;
+  padding: 0;
+  box-shadow: initial;
+  border-radius: initial;
+}
+
+.site-brand-wrapper {
+  background-image: url(https://cdn.ego1st.cn/themeImg/header-weather.jpg);
+  height: 750px;
+  width: 100%;
+  position: relative;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.main:after,
+.main:before {
+  content: " ";
+  display: table;
+}
+
+.main:after {
+  clear: both;
+}
+
+.main-inner {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.content-wrap {
+  float: left;
+  box-sizing: border-box;
+  width: 772px;
+  box-shadow: initial;
+  border-radius: initial;
+}
+
+
+
+.sidebar {
+  float: right;
+  margin: 0;
+  background: #fff;
+  border-radius: 5px;
+  transform: none;
+  position: static;
+  width: 315px;
+  box-shadow: none;
+}
+
+.sidebar-inner {
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  color: #555;
+  background: #fff;
+  box-shadow: initial;
+  border-radius: initial;
+  border-radius: 5px;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+}
+
+@media (max-width: 1120px) {
+  .header {
+    width: auto;
+  }
+  .sidebar {
+    display: none;
+  }
+
+  .main-inner {
+    width: auto;
+  }
+
+  .site-brand-wrapper {
+    height: 260px;
+  }
+
+  .header-inner {
+    position: relative;
+    width: auto;
+    border-radius: initial;
+    height: 260px;
+  }
+
+  .content-wrap {
+    width: 100%;
+    padding: 0;
+    min-height: auto;
+    border-radius: initial;
+  }
+}

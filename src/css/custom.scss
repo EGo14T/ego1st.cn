@@ -6,6 +6,17 @@
  */
 
 /* You can override the default Infima variables here. */
+body {
+  position: relative;
+  font-size: 14px;
+  line-height: 2;
+  overflow-x: hidden;
+}
+
+html[data-theme="light"] {
+  background: #efefef;
+}
+
 :root {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: rgb(33, 175, 144);
@@ -28,7 +39,7 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-html[data-theme='dark']::-webkit-scrollbar {
+html[data-theme="dark"]::-webkit-scrollbar {
   /*滚动条整体样式*/
   width: 5px; /*高宽分别对应横竖滚动条的尺寸*/
 }
@@ -60,6 +71,9 @@ html[data-theme="light"]::-webkit-scrollbar-track {
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.1);
-  position: fixed; 
+  position: fixed;
   box-shadow: none;
 }
+
+@import "../theme/BlogListPage/blogListPage.scss";
+@import "../theme/BlogPostItem/blogPostItem.scss";

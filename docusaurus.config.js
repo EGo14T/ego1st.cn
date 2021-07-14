@@ -44,13 +44,10 @@ module.exports = {
           blogSidebarTitle: "近期文章",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.scss'),
         },
       },
     ],
   ],
-  plugins: [
-    // path.resolve(__dirname, "./src/plugins/cookbooks"),
-    './src/plugins/my-plugin'
-  ],
+  plugins: ['docusaurus-plugin-sass'],
 };

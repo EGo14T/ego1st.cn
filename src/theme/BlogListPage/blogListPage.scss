@@ -28,18 +28,25 @@
   text-align: center;
 }
 
+
+
+
 .main:after,
-.main:before {
+.main:before,
+.main-inner:after,
+.main-inner:before {
   content: " ";
   display: table;
 }
 
-.main:after {
+.main:after,
+.main-inner:after {
   clear: both;
 }
 
 .main-inner {
   width: 1110px;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -51,15 +58,14 @@
   border-radius: initial;
 }
 
-
-
 .sidebar {
   float: right;
   margin: 0;
   background: #fff;
   border-radius: 5px;
   transform: none;
-  position: static;
+  position: sticky;
+  top: 120px;
   width: 315px;
   box-shadow: none;
 }

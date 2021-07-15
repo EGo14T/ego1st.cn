@@ -42,6 +42,7 @@ module.exports = {
           path: "./blog",
           routeBasePath: "/",
           blogSidebarTitle: "近期文章",
+          postsPerPage: 3,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.scss'),

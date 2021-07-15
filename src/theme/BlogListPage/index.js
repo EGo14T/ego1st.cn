@@ -8,6 +8,9 @@ import BlogSidebar from "@theme/BlogSidebar";
 function BlogListPage(props) {
   const { metadata, items } = props;
 
+
+  console.log(items);
+
   return (
     <Layout>
       <header className="header">

@@ -9,7 +9,7 @@ function BlogPostPage(props) {
   const { content: BlogPostContents, sidebar } = props;
   const { frontMatter, metadata } = BlogPostContents;
   const { title, description, nextItem, prevItem } = metadata;
-  const { hide_table_of_contents: hideTableOfContents } = frontMatter;
+
   return (
     <Layout title={title} description={description}>
       <div

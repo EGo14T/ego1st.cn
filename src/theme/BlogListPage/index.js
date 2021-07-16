@@ -4,12 +4,47 @@ import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import BlogPostItem from "@theme/BlogPostItem";
 import BlogSidebar from "@theme/BlogSidebar";
+import Link from "@docusaurus/Link";
 
 function BlogListPage(props) {
   const { metadata, items } = props;
 
+  const { page, totalCount, totalPages } = metadata;
+  const { previousPage, nextPage } = metadata;
 
-  console.log(items);
+  const Pagination = () => {
+    let res = [];
+
+    if (previousPage) {
+      res.push(
+        <Link className="extend prev" to={previousPage}>
+          <i className="fa fa-angle-left"></i>
+        </Link>
+      );
+    }
+
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === page) {
+        res.push(<span className="page-number current">{i}</span>);
+      } else {
+        res.push(
+          <Link className="page-number" key={i} to={i === 1 ? `/` : `/page/${i}`}>
+            {i}
+          </Link>
+        );
+      }
+    }
+
+    if (nextPage) {
+      res.push(
+        <Link className="extend prev" to={nextPage}>
+          <i className="fa fa-angle-right"></i>
+        </Link>
+      );
+    }
+
+    return res;
+  };
 
   return (
     <Layout>
@@ -39,6 +74,7 @@ function BlogListPage(props) {
                   </BlogPostItem>
                 ))}
               </section>
+              <nav className="pagination">{Pagination()}</nav>
             </div>
           </div>
           <BlogSidebar />

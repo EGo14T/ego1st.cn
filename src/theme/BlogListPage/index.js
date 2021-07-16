@@ -4,6 +4,7 @@ import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import BlogPostItem from "@theme/BlogPostItem";
 import BlogSidebar from "@theme/BlogSidebar";
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Link from "@docusaurus/Link";
 
 function BlogListPage(props) {
@@ -12,12 +13,16 @@ function BlogListPage(props) {
   const { page, totalCount, totalPages } = metadata;
   const { previousPage, nextPage } = metadata;
 
+  const { siteConfig } = useDocusaurusContext();
+  const { customFields } = siteConfig;
+  const { header_bg } = customFields;
+
   const Pagination = () => {
     let res = [];
 
     if (previousPage) {
       res.push(
-        <Link className="extend prev" to={previousPage}>
+        <Link key="prepage" className="extend prev" to={previousPage}>
           <i className="fa fa-angle-left"></i>
         </Link>
       );
@@ -25,7 +30,11 @@ function BlogListPage(props) {
 
     for (let i = 1; i <= totalPages; i++) {
       if (i === page) {
-        res.push(<span className="page-number current">{i}</span>);
+        res.push(
+          <span key={i} className="page-number current">
+            {i}
+          </span>
+        );
       } else {
         res.push(
           <Link className="page-number" key={i} to={i === 1 ? `/` : `/page/${i}`}>
@@ -37,7 +46,7 @@ function BlogListPage(props) {
 
     if (nextPage) {
       res.push(
-        <Link className="extend prev" to={nextPage}>
+        <Link key="nextpage" className="extend prev" to={nextPage}>
           <i className="fa fa-angle-right"></i>
         </Link>
       );
@@ -50,7 +59,7 @@ function BlogListPage(props) {
     <Layout>
       <header className="header">
         <div className="header-inner">
-          <div className="site-brand-wrapper">
+          <div className="site-brand-wrapper" style={{ backgroundImage: `url(${header_bg})` }}>
             <Head>
               <meta name="keywords" content="ego1st.cn" />
               <title>ego1st.cn</title>

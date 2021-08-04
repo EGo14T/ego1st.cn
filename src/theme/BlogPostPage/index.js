@@ -2,8 +2,6 @@ import React from "react";
 import Layout from "@theme/Layout";
 import BlogPostItem from "@theme/BlogPostItem";
 import BlogPostPaginator from "@theme/BlogPostPaginator";
-import BlogSidebar from "@theme/BlogSidebar";
-import TOC from "@theme/TOC";
 
 function BlogPostPage(props) {
   const { content: BlogPostContents, sidebar } = props;

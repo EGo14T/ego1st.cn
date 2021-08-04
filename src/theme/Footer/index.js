@@ -1,31 +1,45 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { showDateTime } from "../../js/since";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 function Footer(props) {
-  const { siteConfig } = useDocusaurusContext();
-  const { customFields } = siteConfig;
-  const { footer } = customFields;
-  const { since } = footer;
+    const { siteConfig } = useDocusaurusContext();
+    const { customFields } = siteConfig;
+    const { footer } = customFields;
+    const { since } = footer;
 
-  const [count, setCount] = useState(showDateTime(since));
+    const [count, setCount] = useState(showDateTime(since));
 
-  useEffect(() => {
-    const id = setInterval(() => {
-      setCount(showDateTime(since));
-    }, 1000);
-    return () => clearInterval(id);
-  }, []);
+    useEffect(() => {
+        const id = setInterval(() => {
+            setCount(showDateTime(since));
+        }, 1000);
+        return () => clearInterval(id);
+    }, []);
 
-  return (
-    <footer className="footer">
-      <div className="footer-image"></div>
-      <div className="footer-inner"></div>
-      <p>
-        博客已萌萌哒运行<span id="since">{count}</span>
-        <span className="my-face">(●'◡'●)ﾉ♥</span>
-      </p>
-    </footer>
-  );
+    return (
+        <footer className="footer">
+            <div className="footer-image"></div>
+            <div className="footer-inner">
+                <p>
+                    博客已安稳运行<span id="since">{count}</span>
+                    <span className="my-face">ฅʕ•̫͡•ʔฅ</span>
+                </p>
+                <p>
+                    © <span itemProp="copyrightYear">2021</span>. 由{" "}
+                    <a className="a-footer" href="https://hexo.io/" target="_blank" className="external" rel="nofollow">
+                        Docusaurus 
+                    </a>
+                    <span> 强力驱动.</span>
+                </p>
+                <p>
+                    Made with <i className="fa fa-heart throb" style={{ color: "#d43f57" }}></i> by
+                    <span className="author" itemProp="copyrightHolder">
+                        ego1st.
+                    </span>
+                </p>
+            </div>
+        </footer>
+    );
 }
 export default Footer;

@@ -1,0 +1,26 @@
+.footer {
+    background: #232323;
+    padding: 15px 0 40px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    line-height: 1.5;
+
+    .footer-inner {
+        margin: 0;
+        width: 100%;
+        p {
+            margin: 5px 0;
+        }
+    }
+
+    .footer-image {
+        background: url(https://cdn.ego1st.cn/themeImg/footer.png) no-repeat 50%;
+        height: 368px;
+        z-index: 1;
+        position: absolute;
+        bottom: 55px;
+        width: 100%;
+        pointer-events: none;
+    }
+}

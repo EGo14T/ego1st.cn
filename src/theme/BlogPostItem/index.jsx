@@ -7,7 +7,7 @@ import BlogSidebar from "@theme/BlogSidebar";
 function BlogPostItem(props) {
     const { children, metadata, isBlogPostPage = false } = props;
 
-    const { date, permalink, tags, title } = metadata;
+    const { date, permalink, tags, title, words } = metadata;
 
     const tag = tags[0];
     const { permalink: tagLink, label } = tag;
@@ -45,6 +45,7 @@ function BlogPostItem(props) {
                 </h1>
                 <div className="post-meta">
                     <span className="post-time">发表于 {dateStr}</span>
+                    <span>字数{words}</span>
                 </div>
             </header>
         );

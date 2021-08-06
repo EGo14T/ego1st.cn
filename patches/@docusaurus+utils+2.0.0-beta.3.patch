@@ -1,0 +1,12 @@
+diff --git a/node_modules/@docusaurus/utils/lib/markdownParser.js b/node_modules/@docusaurus/utils/lib/markdownParser.js
+index 42834cf..a70e2bf 100644
+--- a/node_modules/@docusaurus/utils/lib/markdownParser.js
++++ b/node_modules/@docusaurus/utils/lib/markdownParser.js
+@@ -119,6 +119,7 @@ function parseMarkdownString(markdownFileContent, options) {
+             content,
+             contentTitle,
+             excerpt,
++            markdownFileContent,
+         };
+     }
+     catch (e) {

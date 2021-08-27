@@ -6,19 +6,17 @@ import BlogPostItem from "@theme/BlogPostItem";
 import BlogSidebar from "@theme/BlogSidebar";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Link from "@docusaurus/Link";
+import Main from "../Main";
 
 function BlogListPage(props) {
     const { metadata, items } = props;
 
-    const { page, totalCount, totalPages, words } = metadata;
+    const { page, totalPages } = metadata;
     const { previousPage, nextPage } = metadata;
 
     const { siteConfig } = useDocusaurusContext();
     const { customFields } = siteConfig;
     const { header_bg } = customFields;
-
-    console.log(metadata);
-
 
     const Pagination = () => {
         let res = [];
@@ -70,28 +68,21 @@ function BlogListPage(props) {
                     </div>
                 </div>
             </header>
-            <main className="main">
-                <div className="main-inner">
-                    <div className="content-wrap">
-                        <div className="content">
-                            <section id="posts" className="posts-expand">
-                                {items.map(({ content: BlogPostContent }) => (
-                                    <BlogPostItem
-                                        key={BlogPostContent.metadata.permalink}
-                                        frontMatter={BlogPostContent.frontMatter}
-                                        metadata={BlogPostContent.metadata}
-                                        truncated={BlogPostContent.metadata.truncated}
-                                    >
-                                        <BlogPostContent />
-                                    </BlogPostItem>
-                                ))}
-                            </section>
-                            <nav className="pagination">{Pagination()}</nav>
-                        </div>
-                    </div>
-                    <BlogSidebar />
-                </div>
-            </main>
+            <Main>
+                <section id="posts" className="posts-expand">
+                    {items.map(({ content: BlogPostContent }) => (
+                        <BlogPostItem
+                            key={BlogPostContent.metadata.permalink}
+                            frontMatter={BlogPostContent.frontMatter}
+                            metadata={BlogPostContent.metadata}
+                            truncated={BlogPostContent.metadata.truncated}
+                        >
+                            <BlogPostContent />
+                        </BlogPostItem>
+                    ))}
+                </section>
+                <nav className="pagination">{Pagination()}</nav>
+            </Main>
         </Layout>
     );
 }

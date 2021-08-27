@@ -8,7 +8,7 @@ module.exports = function (context, options) {
             tagName: "link",
             attributes: {
               rel: "stylesheet",
-              href: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
+              href: "//cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
             },
           },
         ],

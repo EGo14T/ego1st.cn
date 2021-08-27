@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import MDXComponents from "@theme/MDXComponents";
 import Link from "@docusaurus/Link";
-import BlogSidebar from "@theme/BlogSidebar";
+
+import Main from "../Main";
 
 function BlogPostItem(props) {
     const { children, metadata, isBlogPostPage = false } = props;
@@ -67,25 +68,31 @@ function BlogPostItem(props) {
     };
 
     return (
-        <main className="main">
-            <div className="main-inner">
-                <div className="content-wrap">
-                    <div className="content">
-                        <section id="posts" className="posts-expand">
-                            <article className="post post-type-normal">
-                                <div className="post-block">
-                                    {postDate()}
-                                    {postBadge()}
-                                    {itemHeader()}
-                                    {itemBody()}
-                                </div>
-                            </article>
-                        </section>
+        <>
+            {isBlogPostPage ? (
+                <Main>
+                    <section id="posts" className="posts-expand">
+                        <article className="post post-type-normal">
+                            <div className="post-block">
+                                {postDate()}
+                                {postBadge()}
+                                {itemHeader()}
+                                {itemBody()}
+                            </div>
+                        </article>
+                    </section>
+                </Main>
+            ) : (
+                <article className="post post-type-normal">
+                    <div className="post-block">
+                        {postDate()}
+                        {postBadge()}
+                        {itemHeader()}
+                        {itemBody()}
                     </div>
-                </div>
-                {isBlogPostPage && <BlogSidebar />}
-            </div>
-        </main>
+                </article>
+            )}
+        </>
     );
 }
 

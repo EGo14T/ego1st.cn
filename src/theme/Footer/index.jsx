@@ -28,7 +28,7 @@ function Footer(props) {
                 <p>
                     © <span itemProp="copyrightYear">2021</span>. 由{" "}
                     <a className="a-footer" href="https://hexo.io/" target="_blank" className="external" rel="nofollow">
-                        Docusaurus 
+                        Docusaurus
                     </a>
                     <span> 强力驱动.</span>
                 </p>

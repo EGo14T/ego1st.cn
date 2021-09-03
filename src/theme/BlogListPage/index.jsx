@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import BlogPostItem from "@theme/BlogPostItem";
-import BlogSidebar from "@theme/BlogSidebar";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Link from "@docusaurus/Link";
 import Main from "../Main";

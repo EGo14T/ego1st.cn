@@ -2,13 +2,13 @@ import React, { useEffect } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import MDXComponents from "@theme/MDXComponents";
 import Link from "@docusaurus/Link";
-import BlogSidebar from "@theme/BlogSidebar";
+
+import Main from "../Main";
+import { queryVistors } from "../../js/leancloud";
 
 function BlogPostItem(props) {
     const { children, metadata, isBlogPostPage = false } = props;
-
     const { date, permalink, tags, title, words } = metadata;
-
     const tag = tags[0];
     const { permalink: tagLink, label } = tag;
 
@@ -17,6 +17,13 @@ function BlogPostItem(props) {
     let month = dateObj.getMonth() + 1;
     const day = dateObj.getDate();
     let dateStr = `${year}-${month}-${day}`;
+
+
+
+
+    useEffect(() => {
+        console.log(queryVistors(title));
+    }, []);
 
     const postDate = () => {
         return (
@@ -44,14 +51,31 @@ function BlogPostItem(props) {
                     <Link to={permalink}>{title}</Link>
                 </h1>
                 <div className="post-meta">
-                    <span className="post-time">发表于 {dateStr}</span>
+                    <span className="post-time">
+                        <span className="post-meta-item-icon">
+                            <i className="fa fa-calendar"></i>
+                        </span>
+                        <span className="post-meta-item-text">发表于</span>
+                        <span>{dateStr}</span>
+                    </span>
+
                     <span className="post-wordcount">
                         <span className="post-meta-divider">•</span>
                         <span className="post-meta-item-icon">
-                            <i className="fa fa-file-word-o"></i>{" "}
+                            <i className="fa fa-file-word-o"></i>
                         </span>
                         <span className="post-meta-item-text">字数统计</span>
                         <span title="字数统计">{words}</span>
+                    </span>
+
+                    <span className="post-vistors">
+                        <span className="post-meta-divider">•</span>
+                        <span className="post-meta-item-icon">
+                            <i className="fa fa-eye"></i>
+                        </span>
+                        <span className="post-meta-item-text">被</span>
+                        <span title="vistors">{words}</span>
+                        <span className="post-meta-item-text">人看爆</span>
                     </span>
                 </div>
             </header>
@@ -74,25 +98,31 @@ function BlogPostItem(props) {
     };
 
     return (
-        <main className="main">
-            <div className="main-inner">
-                <div className="content-wrap">
-                    <div className="content">
-                        <section id="posts" className="posts-expand">
-                            <article className="post post-type-normal">
-                                <div className="post-block">
-                                    {postDate()}
-                                    {postBadge()}
-                                    {itemHeader()}
-                                    {itemBody()}
-                                </div>
-                            </article>
-                        </section>
+        <>
+            {isBlogPostPage ? (
+                <Main>
+                    <section id="posts" className="posts-expand">
+                        <article className="post post-type-normal">
+                            <div className="post-block">
+                                {postDate()}
+                                {postBadge()}
+                                {itemHeader()}
+                                {itemBody()}
+                            </div>
+                        </article>
+                    </section>
+                </Main>
+            ) : (
+                <article className="post post-type-normal">
+                    <div className="post-block">
+                        {postDate()}
+                        {postBadge()}
+                        {itemHeader()}
+                        {itemBody()}
                     </div>
-                </div>
-                {isBlogPostPage && <BlogSidebar />}
-            </div>
-        </main>
+                </article>
+            )}
+        </>
     );
 }
 

@@ -89,16 +89,20 @@
         color: #00a7e0;
     }
 
+    .post-wordcount {
+        color: #000;
+    }
+
+    .post-vistors {
+        color: #ff3f1a;
+    }
+
     .post-meta-divider {
         margin: 0 0.5em;
     }
 
     .post-meta-item-icon {
         margin-right: 3px;
-    }
-
-    .post-wordcount {
-        color: #000;
     }
 }
 
@@ -146,5 +150,16 @@
     .post {
         padding: 40px 20px;
         border-radius: 0;
+    }
+}
+
+@media (max-width: 0px) {
+    .post-meta-item-text {
+        display: none;
+    }
+}
+@media (max-width: 1120px) {
+    .post-meta-item-text {
+        display: none;
     }
 }

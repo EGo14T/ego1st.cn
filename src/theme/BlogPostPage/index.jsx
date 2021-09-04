@@ -3,7 +3,7 @@ import Layout from "@theme/Layout";
 import BlogPostItem from "@theme/BlogPostItem";
 
 function BlogPostPage(props) {
-  const { content: BlogPostContents, sidebar } = props;
+  const { content: BlogPostContents } = props;
   const { frontMatter, metadata } = BlogPostContents;
   const { title, description, nextItem, prevItem } = metadata;
 
@@ -28,6 +28,7 @@ function BlogPostPage(props) {
           <BlogPostItem frontMatter={frontMatter} metadata={metadata} isBlogPostPage>
             <BlogPostContents />
           </BlogPostItem>
+          {/* {(nextItem || prevItem) && <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />} */}
         </>
       )}
     </Layout>

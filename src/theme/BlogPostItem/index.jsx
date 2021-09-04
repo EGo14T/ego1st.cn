@@ -18,9 +18,6 @@ function BlogPostItem(props) {
     const day = dateObj.getDate();
     let dateStr = `${year}-${month}-${day}`;
 
-
-
-
     useEffect(() => {
         console.log(queryVistors(title));
     }, []);

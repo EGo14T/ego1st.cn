@@ -33,7 +33,7 @@ function Footer(props) {
                     <span> 强力驱动.</span>
                 </p>
                 <p>
-                    Made with <i className="fa fa-heart throb" style={{ color: "#d43f57" }}/>
+                    Made with <i className="fa fa-heart throb" style={{ color: "#d43f57" }} />
                     <span className="author" itemProp="copyrightHolder">
                         &nbsp;by ego1st.
                     </span>

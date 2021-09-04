@@ -7,71 +7,71 @@
 
 /* You can override the default Infima variables here. */
 body {
-  position: relative;
-  font-size: 14px;
-  line-height: 2;
-  overflow-x: hidden;
+    position: relative;
+    font-size: 14px;
+    line-height: 2;
+    overflow-x: hidden;
 }
 
 html[data-theme="light"] {
-  background: #efefef;
+    background: #efefef;
 }
 
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
-  --ifm-code-font-size: 95%;
+    --ifm-color-primary: #25c2a0;
+    --ifm-color-primary-dark: rgb(33, 175, 144);
+    --ifm-color-primary-darker: rgb(31, 165, 136);
+    --ifm-color-primary-darkest: rgb(26, 136, 112);
+    --ifm-color-primary-light: rgb(70, 203, 174);
+    --ifm-color-primary-lighter: rgb(102, 212, 189);
+    --ifm-color-primary-lightest: rgb(146, 224, 208);
+    --ifm-code-font-size: 95%;
 }
 
 .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.1);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
+    background-color: rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
 }
 
 html[data-theme="dark"] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 html[data-theme="dark"]::-webkit-scrollbar {
-  /*滚动条整体样式*/
-  width: 5px; /*高宽分别对应横竖滚动条的尺寸*/
+    /*滚动条整体样式*/
+    width: 5px; /*高宽分别对应横竖滚动条的尺寸*/
 }
 html[data-theme="dark"]::-webkit-scrollbar-thumb {
-  /*滚动条里面小方块*/
-  border-radius: 10px;
-  background: #ffffff;
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    background: #ffffff;
 }
 html[data-theme="dark"]::-webkit-scrollbar-track {
-  /*滚动条里面轨道*/
-  border-radius: 10px;
-  background: #18191a;
+    /*滚动条里面轨道*/
+    border-radius: 10px;
+    background: #18191a;
 }
 
 html[data-theme="light"]::-webkit-scrollbar {
-  /*滚动条整体样式*/
-  width: 5px; /*高宽分别对应横竖滚动条的尺寸*/
+    /*滚动条整体样式*/
+    width: 5px; /*高宽分别对应横竖滚动条的尺寸*/
 }
 html[data-theme="light"]::-webkit-scrollbar-thumb {
-  /*滚动条里面小方块*/
-  border-radius: 10px;
-  background: #535353;
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    background: #535353;
 }
 html[data-theme="light"]::-webkit-scrollbar-track {
-  /*滚动条里面轨道*/
-  border-radius: 10px;
-  background: #ffffff;
+    /*滚动条里面轨道*/
+    border-radius: 10px;
+    background: #ffffff;
 }
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.1);
-  box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: none;
 }
 
 @import "../theme/BlogListPage/blogListPage.scss";

@@ -13,14 +13,7 @@ function BlogSidebar(props) {
                     <div className="links-of-author">
                         {social.map((item) => (
                             <span className="links-of-author-item" key={item.title}>
-                                <a
-                                    href={item.url}
-                                    target="_blank"
-                                    title={item.title}
-                                    data-balloon={item.title}
-                                    data-balloon-pos="up"
-                                    dangerouslySetInnerHTML={{ __html: item.icon }}
-                                />
+                                <a href={item.url} target="_blank" title={item.title} data-balloon={item.title} data-balloon-pos="up" dangerouslySetInnerHTML={{ __html: item.icon }} />
                             </span>
                         ))}
                     </div>

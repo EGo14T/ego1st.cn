@@ -5,7 +5,7 @@ import Header from "../Header";
 function BlogTagsPostPage(props) {
     return (
         <Layout>
-            <Header/>
+            <Header />
         </Layout>
     );
 }

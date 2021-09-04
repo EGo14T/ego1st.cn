@@ -45,7 +45,14 @@ function BlogPostItem(props) {
                 </h1>
                 <div className="post-meta">
                     <span className="post-time">发表于 {dateStr}</span>
-                    <span>字数{words}</span>
+                    <span className="post-wordcount">
+                        <span className="post-meta-divider">•</span>
+                        <span className="post-meta-item-icon">
+                            <i className="fa fa-file-word-o"></i>{" "}
+                        </span>
+                        <span className="post-meta-item-text">字数统计</span>
+                        <span title="字数统计">{words}</span>
+                    </span>
                 </div>
             </header>
         );

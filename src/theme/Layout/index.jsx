@@ -13,7 +13,6 @@ function Layout(props) {
   return (
     <LayoutProviders>
       <LayoutHead {...props} />
-      <Navbar />
       <div className={clsx(ThemeClassNames.wrapper.main, wrapperClassName, pageClassName)}>{children}</div>
       {!noFooter && <Footer />}
     </LayoutProviders>

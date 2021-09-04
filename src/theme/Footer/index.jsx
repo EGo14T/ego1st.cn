@@ -28,14 +28,14 @@ function Footer(props) {
                 <p>
                     © <span itemProp="copyrightYear">2021</span>. 由{" "}
                     <a className="a-footer" href="https://hexo.io/" target="_blank" className="external" rel="nofollow">
-                        Docusaurus 
+                        Docusaurus
                     </a>
                     <span> 强力驱动.</span>
                 </p>
                 <p>
-                    Made with <i className="fa fa-heart throb" style={{ color: "#d43f57" }}></i> by
+                    Made with <i className="fa fa-heart throb" style={{ color: "#d43f57" }}/>
                     <span className="author" itemProp="copyrightHolder">
-                        ego1st.
+                        &nbsp;by ego1st.
                     </span>
                 </p>
             </div>

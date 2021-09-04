@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import BlogPostItem from "@theme/BlogPostItem";
-import BlogPostPaginator from "@theme/BlogPostPaginator";
 
 function BlogPostPage(props) {
   const { content: BlogPostContents, sidebar } = props;
@@ -29,7 +28,6 @@ function BlogPostPage(props) {
           <BlogPostItem frontMatter={frontMatter} metadata={metadata} isBlogPostPage>
             <BlogPostContents />
           </BlogPostItem>
-          {(nextItem || prevItem) && <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />}
         </>
       )}
     </Layout>

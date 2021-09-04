@@ -55,32 +55,6 @@
   border-radius: initial;
 }
 
-.sidebar {
-  float: right;
-  margin: 0;
-  background: #fff;
-  border-radius: 5px;
-  transform: none;
-  position: sticky;
-  top: 120px;
-  width: 315px;
-  box-shadow: none;
-}
-
-.sidebar-inner {
-  padding: 20px;
-  box-sizing: border-box;
-  width: 100%;
-  color: #555;
-  background: #fff;
-  box-shadow: initial;
-  border-radius: initial;
-  border-radius: 5px;
-  z-index: 2;
-  position: relative;
-  text-align: center;
-}
-
 .pagination {
   margin: 20px 0;
   border-top: none;

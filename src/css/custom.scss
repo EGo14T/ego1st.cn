@@ -71,7 +71,6 @@ html[data-theme="light"]::-webkit-scrollbar-track {
 
 .navbar {
   background-color: rgba(0, 0, 0, 0.1);
-  position: fixed;
   box-shadow: none;
 }
 
@@ -79,3 +78,5 @@ html[data-theme="light"]::-webkit-scrollbar-track {
 @import "../theme/BlogPostItem/blogPostItem.scss";
 @import "../theme/Footer/footer.scss";
 @import "../theme/Footer/animate.scss";
+@import "../theme/BlogSidebar/BlogSidebar.scss";
+@import "../theme/BlogSidebar/balloon.scss";

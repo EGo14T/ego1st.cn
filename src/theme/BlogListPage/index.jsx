@@ -4,6 +4,7 @@ import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import BlogPostItem from "@theme/BlogPostItem";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Navbar from '@theme/Navbar';
 import Link from "@docusaurus/Link";
 import Main from "../Main";
 
@@ -60,6 +61,7 @@ function BlogListPage(props) {
             <header className="header">
                 <div className="header-inner">
                     <div className="site-brand-wrapper" style={{ backgroundImage: `url(${header_bg})` }}>
+                        <Navbar/>
                         <Head>
                             <meta name="keywords" content="ego1st.cn" />
                             <title>ego1st.cn</title>

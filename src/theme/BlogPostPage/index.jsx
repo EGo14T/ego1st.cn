@@ -1,11 +1,12 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import BlogPostItem from "@theme/BlogPostItem";
+import Navbar from '@theme/Navbar';
 
 function BlogPostPage(props) {
     const { content: BlogPostContents } = props;
     const { frontMatter, metadata } = BlogPostContents;
-    const { title, description, nextItem, prevItem } = metadata;
+    const { title, description } = metadata;
 
     return (
         <Layout title={title} description={description}>
@@ -21,6 +22,7 @@ function BlogPostPage(props) {
                     textAlign: "center",
                 }}
             >
+                <Navbar/>
                 <div style={{ fontSize: "60px", paddingTop: "200px" }}>hi,ego1st~</div>
             </div>
             {BlogPostContents && (

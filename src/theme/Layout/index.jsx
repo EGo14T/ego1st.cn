@@ -1,6 +1,5 @@
 import React from "react";
 import clsx from "clsx";
-import Navbar from "@theme/Navbar";
 import Footer from "@theme/Footer";
 import LayoutProviders from "@theme/LayoutProviders";
 import LayoutHead from "@theme/LayoutHead";

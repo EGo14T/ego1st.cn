@@ -4,7 +4,7 @@ import MDXComponents from "@theme/MDXComponents";
 import Link from "@docusaurus/Link";
 
 import Main from "../Main";
-import { queryVistors } from "../../js/leancloud";
+import CountView from "../CountView";
 
 function BlogPostItem(props) {
     const { children, metadata, isBlogPostPage = false } = props;
@@ -17,10 +17,6 @@ function BlogPostItem(props) {
     let month = dateObj.getMonth() + 1;
     const day = dateObj.getDate();
     let dateStr = `${year}-${month}-${day}`;
-
-    useEffect(() => {
-        console.log(queryVistors(title));
-    }, []);
 
     const postDate = () => {
         return (
@@ -71,7 +67,8 @@ function BlogPostItem(props) {
                             <i className="fa fa-eye"></i>
                         </span>
                         <span className="post-meta-item-text">被</span>
-                        <span title="vistors">{words}</span>
+                        {/* 统计访客数 */}
+                        <CountView isBlogPostPage={isBlogPostPage} title={title} url={permalink} />
                         <span className="post-meta-item-text">人看爆</span>
                     </span>
                 </div>

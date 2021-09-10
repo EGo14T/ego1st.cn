@@ -1,10 +1,11 @@
 .footer {
     background: #232323;
-    padding: 15px 0 40px;
+    padding: 15px 0 40px 0;
     text-align: center;
     color: #888;
-    font-size: 12px;
-    line-height: 1.5;
+    font-size: 13px;
+    line-height: 2;
+    height: 180px;
 
     .footer-inner {
         margin: 0;
@@ -15,11 +16,12 @@
     }
 
     .footer-image {
-        background: url(https://cdn.ego1st.cn/themeImg/footer.png) no-repeat 50%;
-        height: 368px;
+        background: url(https://cdn.ego1st.cn/themeImg/cat.png) no-repeat 50%;
+        background-size: 500px;
+        height: 315px;
         z-index: 1;
         position: absolute;
-        bottom: 55px;
+        bottom: 0px;
         width: 100%;
         pointer-events: none;
     }

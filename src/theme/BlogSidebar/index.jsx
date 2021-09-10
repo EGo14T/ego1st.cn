@@ -10,6 +10,9 @@ function BlogSidebar(props) {
         <aside className="sidebar">
             <div className="sidebar-inner">
                 <section>
+                    <p className="site-description motion-element" itemProp="description">
+                        联系我
+                    </p>
                     <div className="links-of-author">
                         {social.map((item) => (
                             <span className="links-of-author-item" key={item.title}>
@@ -17,7 +20,14 @@ function BlogSidebar(props) {
                             </span>
                         ))}
                     </div>
-
+                    <p className="site-description motion-element" itemProp="description">
+                        特别赞助
+                    </p>
+                    <div className="cc-license motion-element" itemProp="license">
+                        <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" className="cc-opacity" target="_blank">
+                            <img src="https://www.laobuluo.com/banner/upyun.png" alt="Creative Commons" />
+                        </a>
+                    </div>
                     <div className="feed-link">
                         <a className="feed-rss" href="/atom.xml" rel="alternate" target="_blank">
                             <i className="fa fa-rss"></i> <span>RSS 订阅</span>

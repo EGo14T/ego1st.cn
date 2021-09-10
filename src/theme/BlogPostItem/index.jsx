@@ -18,6 +18,14 @@ function BlogPostItem(props) {
     const day = dateObj.getDate();
     let dateStr = `${year}-${month}-${day}`;
 
+    useEffect(() => {
+        if (isBlogPostPage) {
+            setTimeout(() => {
+                window.scrollTo({ top: 630, behavior: "smooth" });
+            }, 0);
+        }
+    }, []);
+
     const postDate = () => {
         return (
             <div className="post-date">

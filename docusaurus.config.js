@@ -34,7 +34,10 @@ module.exports = {
 
     // 自定义配置
     customFields: {
-        header_bg: "https://cdn.ego1st.cn/themeImg/header-weather.jpg",
+        header_bg: {
+            light: "img/wallhaven-light.png",
+            dark: "img/wallhaven-dark.png"
+        },
 
         card: {
             avatar: "https://cdn.ego1st.cn/themeImg/card.jpg",

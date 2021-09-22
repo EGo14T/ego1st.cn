@@ -7,6 +7,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Navbar from '@theme/Navbar';
 import Link from "@docusaurus/Link";
 import Main from "../Main";
+import Test from "../Test"
 
 function BlogListPage(props) {
     const { metadata, items } = props;
@@ -58,15 +59,7 @@ function BlogListPage(props) {
     return (
         <Layout>
             <header className="header">
-                <div className="header-inner">
-                    <div className="site-brand-wrapper" style={{ backgroundImage: `url(${header_bg})` }}>
-                        <Navbar/>
-                        <Head>
-                            <meta name="keywords" content="ego1st.cn" />
-                            <title>ego1st.cn</title>
-                        </Head>
-                    </div>
-                </div>
+                <Test></Test>
             </header>
             <Main >
                 <section id="posts" className="posts-expand">

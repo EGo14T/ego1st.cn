@@ -17,6 +17,10 @@ html[data-theme="light"] {
     background: #efefef;
 }
 
+html[data-theme="dark"] {
+    background: #efefef;
+}
+
 :root {
     --ifm-color-primary: #25c2a0;
     --ifm-color-primary-dark: rgb(33, 175, 144);

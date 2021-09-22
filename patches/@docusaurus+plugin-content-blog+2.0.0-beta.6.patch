@@ -1,0 +1,34 @@
+diff --git a/node_modules/@docusaurus/plugin-content-blog/lib/blogUtils.js b/node_modules/@docusaurus/plugin-content-blog/lib/blogUtils.js
+index eb6bb55..36b758e 100644
+--- a/node_modules/@docusaurus/plugin-content-blog/lib/blogUtils.js
++++ b/node_modules/@docusaurus/plugin-content-blog/lib/blogUtils.js
+@@ -127,7 +127,7 @@ async function processBlogSourceFile(blogSourceRelative, contentPaths, context,
+     // Lookup in localized folder in priority
+     const blogDirPath = await utils_1.getFolderContainingFile(getContentPathList(contentPaths), blogSourceRelative);
+     const blogSourceAbsolute = path_1.default.join(blogDirPath, blogSourceRelative);
+-    const { frontMatter, content, contentTitle, excerpt, } = await parseBlogPostMarkdownFile(blogSourceAbsolute);
++    const { frontMatter, content, contentTitle, excerpt, markdownFileContent} = await parseBlogPostMarkdownFile(blogSourceAbsolute);
+     const aliasedSource = utils_1.aliasedSitePath(blogSourceAbsolute, siteDir);
+     if (frontMatter.draft && process.env.NODE_ENV === 'production') {
+         return undefined;
+@@ -176,6 +176,12 @@ async function processBlogSourceFile(blogSourceRelative, contentPaths, context,
+         }
+         return undefined;
+     }
++
++    const parseMD = markdownFileContent.replace(/\-\-\-\r\n(?:.|\r\n)*\-\-\-\r\n/g, "")
++                                        .replace("<!--truncate-->", "")
++                                        .replace(/\#/g, "")
++                                        .replace(/\s+/g, "");
++    const words = parseMD.length
+     const tagsBasePath = utils_1.normalizeUrl([baseUrl, options.routeBasePath, 'tags']); // make this configurable?
+     const authors = authors_1.getBlogPostAuthors({ authorsMap, frontMatter });
+     return {
+@@ -188,6 +194,7 @@ async function processBlogSourceFile(blogSourceRelative, contentPaths, context,
+             description,
+             date,
+             formattedDate,
++            words,
+             tags: utils_1.normalizeFrontMatterTags(tagsBasePath, frontMatter.tags),
+             readingTime: showReadingTime ? reading_time_1.default(content).minutes : undefined,
+             truncated: (truncateMarker === null || truncateMarker === void 0 ? void 0 : truncateMarker.test(content)) || false,

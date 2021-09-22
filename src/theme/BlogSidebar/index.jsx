@@ -1,14 +1,24 @@
 import React, { useEffect } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import TOCHeadings  from "@theme/TOC";
 
 function BlogSidebar(props) {
     const { siteConfig } = useDocusaurusContext();
     const { customFields } = siteConfig;
     const { social } = customFields;
+    const { isBlogPostPage, toc } = props;
 
     return (
         <aside className="sidebar">
             <div className="sidebar-inner">
+                {isBlogPostPage && (
+                    <ul className="sidebar-nav">
+                        <li className="">文章目录</li>
+                        <li className="">关于我</li>
+                    </ul>
+                )}
+
+                {isBlogPostPage && <TOCHeadings toc={toc} />}
                 <section>
                     <p className="site-description motion-element" itemProp="description">
                         联系我

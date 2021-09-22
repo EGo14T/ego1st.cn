@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState,useEffect } from "react";
 
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
@@ -10,7 +10,6 @@ import Main from "../Main";
 
 function BlogListPage(props) {
     const { metadata, items } = props;
-
     const { page, totalPages } = metadata;
     const { previousPage, nextPage } = metadata;
 
@@ -69,7 +68,7 @@ function BlogListPage(props) {
                     </div>
                 </div>
             </header>
-            <Main>
+            <Main >
                 <section id="posts" className="posts-expand">
                     {items.map(({ content: BlogPostContent }) => (
                         <BlogPostItem

@@ -7,7 +7,7 @@ import Main from "../Main";
 import CountView from "../CountView";
 
 function BlogPostItem(props) {
-    const { children, metadata, isBlogPostPage = false } = props;
+    const { children, metadata, isBlogPostPage = false, toc } = props;
     const { date, permalink, tags, title, words } = metadata;
     const tag = tags[0];
     const { permalink: tagLink, label } = tag;
@@ -102,7 +102,7 @@ function BlogPostItem(props) {
     return (
         <>
             {isBlogPostPage ? (
-                <Main>
+                <Main isBlogPostPage={isBlogPostPage} toc={toc}>
                     <section id="posts" className="posts-expand">
                         <article className="post post-type-normal">
                             <div className="post-block">

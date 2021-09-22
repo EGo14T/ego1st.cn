@@ -1,6 +1,6 @@
 .sidebar {
     float: right;
-    margin: 0;
+    margin: 0 0 40px 0;
     background: #fff;
     border-radius: 5px;
     transform: none;
@@ -8,10 +8,6 @@
     top: 120px;
     width: 315px;
     box-shadow: none;
-
-    a {
-        color: #555;
-    }
 }
 
 .sidebar-inner {
@@ -26,6 +22,18 @@
     z-index: 2;
     position: relative;
     text-align: center;
+
+    .sidebar-nav {
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            padding: 0 10px;
+            list-style-type: none;
+            cursor: pointer;
+            color: #555;
+        }
+    }
 }
 
 .links-of-author {
@@ -100,5 +108,4 @@
     font-size: 14px;
     font-weight: 700;
     color: #555;
-
 }

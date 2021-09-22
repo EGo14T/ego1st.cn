@@ -5,11 +5,6 @@ import Head from "@docusaurus/Head";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Main from "../Main";
 
-
-
-import 'aplayer/dist/APlayer.min.css';
-import APlayer from 'aplayer';
-
 function BlogTagsPostPage(props) {
 
     const { siteConfig } = useDocusaurusContext();

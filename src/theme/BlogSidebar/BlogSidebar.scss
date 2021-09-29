@@ -28,11 +28,20 @@
         padding: 0;
         li {
             display: inline-block;
-            padding: 0 10px;
+            margin: 0 10px;
             list-style-type: none;
             cursor: pointer;
-            color: #555;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+                color: #fc6423;
+            }
         }
+    }
+
+    .sidebar-nav-active {
+        color: #fc6423;
+        border-bottom-color: #fc6423 !important;
     }
 }
 
@@ -108,4 +117,13 @@
     font-size: 14px;
     font-weight: 700;
     color: #555;
+    cursor: default;
+}
+
+.section-hide {
+    display: none;
+}
+
+.section-show {
+    display: block;
 }

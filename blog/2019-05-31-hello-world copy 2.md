@@ -1,6 +1,6 @@
 ---
-slug: hello-world3
-title: Hello3
+slug: hello-world1
+title: Hello1
 author: Endilie Yacop Sucipto
 author_title: Maintainer of Docusaurus
 author_url: https://github.com/endiliey

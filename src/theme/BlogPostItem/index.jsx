@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import MDXComponents from "@theme/MDXComponents";
 import Link from "@docusaurus/Link";
-
 import Main from "../Main";
 import CountView from "../CountView";
 
 function BlogPostItem(props) {
-    const { children, metadata, isBlogPostPage = false, toc } = props;
+    const { children, metadata, isBlogPostPage = false, toc, frontMatter, onOpenItem } = props;
     const { date, permalink, tags, title, words } = metadata;
+    const { slug } = frontMatter;
     const tag = tags[0];
     const { permalink: tagLink, label } = tag;
 
@@ -20,11 +20,25 @@ function BlogPostItem(props) {
 
     useEffect(() => {
         if (isBlogPostPage) {
-            setTimeout(() => {
-                window.scrollTo({ top: 630, behavior: "smooth" });
-            }, 0);
+            window.addEventListener("scroll", bindHandleScroll);
         }
     }, []);
+
+    const bindHandleScroll = (e) => {
+        if (document.scrollingElement.scrollTop === 0) {
+            document.scrollingElement.scrollTop = 630;
+            window.removeEventListener("scroll", bindHandleScroll);
+        }
+    };
+
+    const handleOpenItem = () => {
+        if (!isBlogPostPage) {
+            document.scrollingElement.scrollTo({ top: 630, behavior: "smooth" });
+            setTimeout(() => {
+                props.history.push(permalink);
+            }, 500);
+        }
+    };
 
     const postDate = () => {
         return (
@@ -48,8 +62,9 @@ function BlogPostItem(props) {
     const itemHeader = () => {
         return (
             <header className="post-header">
-                <h1 className="post-title">
-                    <Link to={permalink}>{title}</Link>
+                <h1 className="post-title" onClick={() => handleOpenItem()}>
+                    {title}
+                    {/* <Link to={permalink}>{title}</Link> */}
                 </h1>
                 <div className="post-meta">
                     <span className="post-time">
@@ -90,9 +105,9 @@ function BlogPostItem(props) {
                 <MDXProvider components={MDXComponents}>{children}</MDXProvider>
                 <div className="post-button text-center">
                     {!isBlogPostPage && (
-                        <Link className="btn scaleup" to={permalink}>
+                        <span className="btn scaleup" onClick={() => handleOpenItem()}>
                             阅读全文 »
-                        </Link>
+                        </span>
                     )}
                 </div>
             </div>

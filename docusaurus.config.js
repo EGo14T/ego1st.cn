@@ -1,8 +1,8 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-    title: "My Site",
+    title: "ego1st",
     tagline: "Dinosaurs are cool",
-    url: "https://your-docusaurus-test-site.com",
+    url: "https://ego1st.cn",
     baseUrl: "/",
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
@@ -72,7 +72,7 @@ module.exports = {
                     path: "./blog",
                     routeBasePath: "/",
                     blogSidebarTitle: "近期文章",
-                    postsPerPage: 2,
+                    postsPerPage: 5,
                     feedOptions: {
                       type: 'atom',
                       copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,

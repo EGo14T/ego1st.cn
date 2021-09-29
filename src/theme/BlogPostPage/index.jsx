@@ -11,21 +11,6 @@ function BlogPostPage(props) {
 
     return (
         <Layout title={title} description={description}>
-            <div
-                style={{
-                    backgroundImage: "url(https://cdn.ego1st.cn/themeImg/header-weather.jpg)",
-                    height: "750px",
-                    width: "100%",
-                    position: "relative",
-                    backgroundPosition: "center  30%",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                    textAlign: "center",
-                }}
-            >
-                <Navbar />
-                <div style={{ fontSize: "60px", paddingTop: "200px" }}>hi,ego1st~</div>
-            </div>
             {BlogPostContents && (
                 <>
                     <BlogPostItem frontMatter={frontMatter} metadata={metadata} isBlogPostPage toc={!hideTableOfContents && BlogPostContents.toc ? BlogPostContents.toc : undefined}>

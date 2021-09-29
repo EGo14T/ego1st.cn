@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import TOCHeadings  from "@theme/TOC";
+import TOCHeadings from "@theme/TOC";
+import clsx from "clsx";
 
 function BlogSidebar(props) {
     const { siteConfig } = useDocusaurusContext();
@@ -8,18 +9,29 @@ function BlogSidebar(props) {
     const { social } = customFields;
     const { isBlogPostPage, toc } = props;
 
+    const defaultType = isBlogPostPage ? 1 : 2;
+
+    const [tocType, setTocType] = useState(defaultType);
+
     return (
         <aside className="sidebar">
             <div className="sidebar-inner">
                 {isBlogPostPage && (
                     <ul className="sidebar-nav">
-                        <li className="">文章目录</li>
-                        <li className="">关于我</li>
+                        <li className={clsx(tocType === 1 && "sidebar-nav-active")} onClick={() => setTocType(1)}>
+                            文章目录
+                        </li>
+                        <li className={clsx(tocType === 2 && "sidebar-nav-active")} onClick={() => setTocType(2)}>
+                            关于我
+                        </li>
                     </ul>
                 )}
-
-                {isBlogPostPage && <TOCHeadings toc={toc} />}
-                <section>
+                {isBlogPostPage && (
+                    <section className={clsx(tocType === 2 && "section-hide", tocType === 1 && "section-show")}>
+                        <TOCHeadings toc={toc} />
+                    </section>
+                )}
+                <section className={clsx(tocType === 1 && "section-hide", tocType === 2 && "section-show")}>
                     <p className="site-description motion-element" itemProp="description">
                         联系我
                     </p>

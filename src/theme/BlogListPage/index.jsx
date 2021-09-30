@@ -16,21 +16,6 @@ function BlogListPage(props) {
     const { customFields } = siteConfig;
     const { header_bg } = customFields;
 
-    // useEffect(() => {
-    //     const UNLISTEN = props.history.listen((route) => {
-    //         sessionStorage.setItem("lastlocation", document.scrollingElement.scrollTop);
-    //     });
-
-    //     const oldScroll = sessionStorage.getItem("lastlocation");
-    //     if (oldScroll) {
-    //         document.scrollingElement.scrollTo({ top: 630, behavior: "smooth" });
-    //     }
-
-    //     return () => {
-    //         UNLISTEN && UNLISTEN();
-    //     };
-    // }, []);
-
     const Pagination = () => {
         let res = [];
 
@@ -80,6 +65,7 @@ function BlogListPage(props) {
                             metadata={BlogPostContent.metadata}
                             truncated={BlogPostContent.metadata.truncated}
                             history={history}
+                            isitem={true}
                         >
                             <BlogPostContent />
                         </BlogPostItem>

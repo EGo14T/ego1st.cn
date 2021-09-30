@@ -6,7 +6,7 @@ import Main from "../Main";
 import CountView from "../CountView";
 
 function BlogPostItem(props) {
-    const { children, metadata, isBlogPostPage = false, toc, frontMatter, onOpenItem } = props;
+    const { children, metadata, isBlogPostPage = false, toc, frontMatter } = props;
     const { date, permalink, tags, title, words } = metadata;
     const { slug } = frontMatter;
     const tag = tags[0];
@@ -19,8 +19,11 @@ function BlogPostItem(props) {
     let dateStr = `${year}-${month}-${day}`;
 
     useEffect(() => {
-        if (isBlogPostPage) {
+        const isOpenPost = sessionStorage.getItem("isOpenPost");
+        if (isBlogPostPage && !!isOpenPost) {
             window.addEventListener("scroll", bindHandleScroll);
+        } else if (!!!isOpenPost) {
+            document.scrollingElement.scrollTo({ top: 630, behavior: "smooth" });
         }
     }, []);
 
@@ -28,12 +31,14 @@ function BlogPostItem(props) {
         if (document.scrollingElement.scrollTop === 0) {
             document.scrollingElement.scrollTop = 630;
             window.removeEventListener("scroll", bindHandleScroll);
+            sessionStorage.removeItem("isOpenPost");
         }
     };
 
     const handleOpenItem = () => {
         if (!isBlogPostPage) {
             document.scrollingElement.scrollTo({ top: 630, behavior: "smooth" });
+            sessionStorage.setItem("isOpenPost", true);
             setTimeout(() => {
                 props.history.push(permalink);
             }, 500);
@@ -64,7 +69,6 @@ function BlogPostItem(props) {
             <header className="post-header">
                 <h1 className="post-title" onClick={() => handleOpenItem()}>
                     {title}
-                    {/* <Link to={permalink}>{title}</Link> */}
                 </h1>
                 <div className="post-meta">
                     <span className="post-time">

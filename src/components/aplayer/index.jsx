@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import "APlayer/dist/APlayer.min.css";
 import APlayer from "APlayer";
 import axios from "axios";
-import Loading from "../../theme/Loading";
 
 function EAplayer(props) {
     const api = "https://api.i-meto.com/meting/api?server=netease&type=song&id=1383893826";

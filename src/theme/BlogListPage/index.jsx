@@ -7,6 +7,7 @@ import Navbar from "@theme/Navbar";
 import Link from "@docusaurus/Link";
 import Main from "../Main";
 
+
 function BlogListPage(props) {
     const { metadata, items, history } = props;
     const { page, totalPages } = metadata;

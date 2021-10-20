@@ -1,0 +1,57 @@
+{
+    "code": 200,
+    "message": "Success",
+    "data": [
+        {
+            "comment_id": "1",
+            "user_id": "1",
+            "nickName": "ego1st",
+            "avatar": "https://cdn.ego1st.cn/xinmusic/useravatar/1avatar1611903575341.jpg",
+            "show_id": "1",
+            "comment_content": "主评论",
+            "comment_status": 1,
+            "create_time": "2021-10-09 10:56:09",
+            "comment_replies": [
+                {
+                    "reply_id": "2",
+                    "reply_comment_id": "1",
+                    "user_id": "1",
+                    "nickName": "ego1st",
+                    "avatar": "https://cdn.ego1st.cn/xinmusic/useravatar/1avatar1611903575341.jpg",
+                    "reply_to_reply_id": "0",
+                    "reply_to_user_id": "0",
+                    "reply_to_content": "",
+                    "show_id": "1",
+                    "reply_content": "回复主评论",
+                    "reply_status": 1,
+                    "create_time": "2021-10-09 10:56:58"
+                },
+                {
+                    "reply_id": "3",
+                    "reply_comment_id": "1",
+                    "user_id": "1",
+                    "nickName": "ego1st",
+                    "avatar": "https://cdn.ego1st.cn/xinmusic/useravatar/1avatar1611903575341.jpg",
+                    "reply_to_reply_id": "2",
+                    "reply_to_user_id": "1",
+                    "reply_to_content": "回复主评论",
+                    "show_id": "1",
+                    "reply_content": "评论回复主评论",
+                    "reply_status": 1,
+                    "create_time": "2021-10-09 11:10:34"
+                }
+            ]
+        },
+        {
+            "comment_id": "4",
+            "user_id": "1",
+            "nickName": "ego1st",
+            "avatar": "https://cdn.ego1st.cn/xinmusic/useravatar/1avatar1611903575341.jpg",
+            "show_id": "1",
+            "comment_content": "主评论2",
+            "comment_status": 1,
+            "create_time": "2021-10-11 11:43:34",
+            "comment_replies": null
+        }
+    ]
+}

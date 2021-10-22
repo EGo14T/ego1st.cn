@@ -35,8 +35,8 @@ module.exports = {
     // 自定义配置
     customFields: {
         header_bg: {
-            light: "img/wallhaven-light.png",
-            dark: "img/wallhaven-dark.png"
+            light: "/img/wallhaven-light.png",
+            dark: "/img/wallhaven-dark.png",
         },
 
         card: {
@@ -68,21 +68,39 @@ module.exports = {
             "@docusaurus/preset-classic",
             {
                 docs: false,
-                blog: {
-                    path: "./blog",
-                    routeBasePath: "/",
-                    blogSidebarTitle: "近期文章",
-                    postsPerPage: 5,
-                    feedOptions: {
-                      type: 'atom',
-                      copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,
-                    },
-                },
+                blog: false,
+                // blog: {
+                //     path: "./blog",
+                //     routeBasePath: "/",
+                //     blogSidebarTitle: "近期文章",
+                //     postsPerPage: 5,
+                //     feedOptions: {
+                //       type: 'atom',
+                //       copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,
+                //     },
+                // },
+
                 theme: {
                     customCss: require.resolve("./src/css/custom.scss"),
                 },
             },
         ],
     ],
-    plugins: ["docusaurus-plugin-sass", "./src/plugins/fontAwesome"],
+    plugins: [
+        "docusaurus-plugin-sass",
+        "./src/plugins/fontAwesome",
+        [
+            "./src/plugins/docusaurus-plugin-blog-interceptor",
+            {
+                path: "./blog",
+                routeBasePath: "/",
+                blogSidebarTitle: "近期文章",
+                postsPerPage: 4,
+                feedOptions: {
+                    type: "atom",
+                    copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,
+                },
+            },
+        ],
+    ],
 };

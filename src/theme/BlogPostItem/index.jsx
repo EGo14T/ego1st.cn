@@ -5,6 +5,8 @@ import Link from "@docusaurus/Link";
 import Main from "../Main";
 import CountView from "../CountView";
 
+import {usePluginData} from '@docusaurus/useGlobalData';
+
 function BlogPostItem(props) {
     const { children, metadata, isBlogPostPage = false, toc, frontMatter } = props;
     const { date, permalink, tags, title, words } = metadata;
@@ -84,8 +86,8 @@ function BlogPostItem(props) {
                         <span className="post-meta-item-icon">
                             <i className="fa fa-file-word-o"></i>
                         </span>
-                        <span className="post-meta-item-text">字数统计</span>
-                        <span title="字数统计">{words}</span>
+                        <span className="post-meta-item-text">文章字数</span>
+                        <span title="文章字数">{words}</span>
                     </span>
 
                     <span className="post-vistors">

@@ -3,7 +3,9 @@ import CommentList from "./CommentList";
 import clsx from "clsx";
 import { postComments } from "../../api/api";
 
-export default function Comment() {
+export default function Comment(props) {
+    console.log(props);
+
     const [focusInput, setFocusInput] = useState(false);
     const [content, setContent] = useState(null);
 

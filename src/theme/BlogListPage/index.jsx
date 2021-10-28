@@ -17,8 +17,6 @@ function BlogListPage(props) {
     const { customFields } = siteConfig;
     const { header_bg } = customFields;
 
-    console.log(props);
-
     const Pagination = () => {
         let res = [];
 

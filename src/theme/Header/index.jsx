@@ -4,7 +4,8 @@ import Navbar from "@theme/Navbar";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useThemeContext from "@theme/hooks/useThemeContext";
 
-export default function Test() {
+export default function Header(props) {
+    const { isBlogPostPage } = props;
     const { siteConfig } = useDocusaurusContext();
     const { customFields } = siteConfig;
     const { header_bg } = customFields;

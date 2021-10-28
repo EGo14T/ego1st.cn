@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useLayoutEffect } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import MDXComponents from "@theme/MDXComponents";
 import Link from "@docusaurus/Link";
 import Main from "../Main";
-import CountView from "../CountView";
+import CountView from "../../components/CountView";
 
-import {usePluginData} from '@docusaurus/useGlobalData';
+import { usePluginData } from "@docusaurus/useGlobalData";
 
 function BlogPostItem(props) {
     const { children, metadata, isBlogPostPage = false, toc, frontMatter } = props;
@@ -20,27 +20,9 @@ function BlogPostItem(props) {
     const day = dateObj.getDate();
     let dateStr = `${year}-${month}-${day}`;
 
-    useEffect(() => {
-        const isOpenPost = sessionStorage.getItem("isOpenPost");
-        if (isBlogPostPage && !!isOpenPost) {
-            window.addEventListener("scroll", bindHandleScroll);
-        } else if (!!!isOpenPost) {
-            document.scrollingElement.scrollTo({ top: 630, behavior: "smooth" });
-        }
-    }, []);
-
-    const bindHandleScroll = (e) => {
-        if (document.scrollingElement.scrollTop === 0) {
-            document.scrollingElement.scrollTop = 630;
-            window.removeEventListener("scroll", bindHandleScroll);
-            sessionStorage.removeItem("isOpenPost");
-        }
-    };
-
     const handleOpenItem = () => {
         if (!isBlogPostPage) {
             document.scrollingElement.scrollTo({ top: 630, behavior: "smooth" });
-            sessionStorage.setItem("isOpenPost", true);
             setTimeout(() => {
                 props.history.push(permalink);
             }, 500);
@@ -96,8 +78,6 @@ function BlogPostItem(props) {
                             <i className="fa fa-eye"></i>
                         </span>
                         <span className="post-meta-item-text">被</span>
-                        {/* 统计访客数 */}
-                        <CountView isBlogPostPage={isBlogPostPage} title={title} url={permalink} />
                         <span className="post-meta-item-text">人看爆</span>
                     </span>
                 </div>

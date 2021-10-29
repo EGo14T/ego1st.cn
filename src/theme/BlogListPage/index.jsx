@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import BlogPostItem from "@theme/BlogPostItem";
@@ -6,7 +6,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Navbar from "@theme/Navbar";
 import Link from "@docusaurus/Link";
 import Main from "../Main";
-
 
 function BlogListPage(props) {
     const { metadata, items, history } = props;
@@ -17,14 +16,35 @@ function BlogListPage(props) {
     const { customFields } = siteConfig;
     const { header_bg } = customFields;
 
+    useLayoutEffect(() => {
+        if (page > 1) { 
+            document.scrollingElement.scrollTop = 630;
+        }
+    }, []);
+
+    const bindHandleScroll = (e) => {
+        if (document.scrollingElement.scrollTop < 5) {
+            document.scrollingElement.scrollTop = 630;
+            window.removeEventListener("scroll", bindHandleScroll);
+        }
+    };
+
+    const handleChangePage = (page) => {
+        document.scrollingElement.scrollTo({ top: 630, behavior: "smooth" });
+        window.addEventListener("scroll", bindHandleScroll);
+        setTimeout(() => {
+            props.history.push(page);
+        }, 500);
+    };
+
     const Pagination = () => {
         let res = [];
 
         if (previousPage) {
             res.push(
-                <Link key="prepage" className="extend prev" to={previousPage}>
+                <span key="prepage" className="extend prev" onClick={() => handleChangePage(previousPage)}>
                     <i className="fa fa-angle-left"></i>
-                </Link>
+                </span>
             );
         }
 
@@ -36,10 +56,11 @@ function BlogListPage(props) {
                     </span>
                 );
             } else {
+                const link = i === 1 ? `/` : `/page/${i}`;
                 res.push(
-                    <Link className="page-number" key={i} to={i === 1 ? `/` : `/page/${i}`}>
+                    <span className="page-number" key={i} onClick={() => handleChangePage(link)}>
                         {i}
-                    </Link>
+                    </span>
                 );
             }
         }

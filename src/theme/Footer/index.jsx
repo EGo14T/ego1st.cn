@@ -6,7 +6,7 @@ function Footer(props) {
     const { siteConfig } = useDocusaurusContext();
     const { customFields } = siteConfig;
     const { footer } = customFields;
-    const { since } = footer;
+    const { since, author, beian } = footer;
 
     const [count, setCount] = useState(showDateTime(since));
 
@@ -32,10 +32,12 @@ function Footer(props) {
                     </a>
                     <span> 强力驱动.</span>
                 </p>
+                <p>{beian}</p>
                 <p>
                     Made with <i className="fa fa-heart throb" style={{ color: "#d43f57" }} />
-                    <span className="author" itemProp="copyrightHolder">
-                        &nbsp;by ego1st.
+                    <span itemProp="copyrightHolder">
+                        &nbsp;by
+                        <span className="author">{author}.</span>
                     </span>
                 </p>
             </div>

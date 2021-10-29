@@ -78,6 +78,8 @@ function BlogPostItem(props) {
                             <i className="fa fa-eye"></i>
                         </span>
                         <span className="post-meta-item-text">被</span>
+                        {/* 统计访客数 */}
+                        <CountView isBlogPostPage={isBlogPostPage} title={title} url={permalink} {...props}/>
                         <span className="post-meta-item-text">人看爆</span>
                     </span>
                 </div>

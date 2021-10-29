@@ -51,7 +51,7 @@ function BlogSidebar(props) {
                         </a>
                     </div>
                     <div className="feed-link">
-                        <a className="feed-rss" href="/atom.xml" rel="alternate" target="_blank">
+                        <a className="feed-rss" href="/sitemap.xml" rel="alternate" target="_blank">
                             <i className="fa fa-rss"></i> <span>RSS 订阅</span>
                         </a>
                     </div>

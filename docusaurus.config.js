@@ -28,7 +28,6 @@ module.exports = {
         footer: {
             style: "light",
             links: [],
-            copyright: `<div>© ${new Date().getFullYear()}.由Docusaurus强力驱动.豫ICP备19029669号</div><div>Made with By ego1st</div>`,
         },
     },
 
@@ -47,21 +46,30 @@ module.exports = {
 
         footer: {
             since: "6/28/2019 19:30:00",
+            author: "ego1st",
+            beian: "豫ICP备19029669号",
         },
 
         social: [
             {
                 title: "Github",
                 url: "https://github.com/EGo14T",
-                icon: `<i class='fa fa-fw fa-github'/>`,
+                icon: `<i class='fa fa-fw fa-github'></i>`,
             },
             {
                 title: "Twitter",
                 url: "https://twitter.com/E_Go1ST",
-                icon: `<i class='fa fa-fw fa-twitter'/>`,
+                icon: `<i class='fa fa-fw fa-twitter'></i>`,
             },
         ],
     },
+
+    stylesheets: [
+        {
+          href: '/font/caroline.css',
+          type: 'text/css',
+        },
+      ],
 
     presets: [
         [
@@ -95,7 +103,7 @@ module.exports = {
                 path: "./blog",
                 routeBasePath: "/",
                 blogSidebarTitle: "近期文章",
-                postsPerPage: 4,
+                postsPerPage: 10,
                 feedOptions: {
                     type: "atom",
                     copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,

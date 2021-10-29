@@ -32,6 +32,12 @@ html[data-theme="dark"] {
     --ifm-code-font-size: 95%;
 }
 
+:root .navbar__title {
+    margin-left: 10px;
+    font-family: "Caroline", sans-serif;
+    font-size: xx-large;
+}
+
 .docusaurus-highlight-code-line {
     background-color: rgba(0, 0, 0, 0.1);
     display: block;
@@ -73,10 +79,10 @@ html[data-theme="light"]::-webkit-scrollbar-track {
     background: #ffffff;
 }
 
-.navbar {
-    background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: none;
-}
+// .navbar {
+//     background-color: rgba(0, 0, 0, 0.1);
+//     box-shadow: none;
+// }
 
 .button,
 button {

@@ -8,9 +8,6 @@
 /* You can override the default Infima variables here. */
 body {
     position: relative;
-    font-size: 14px;
-    line-height: 2;
-    overflow-x: hidden;
 }
 
 html[data-theme="light"] {
@@ -79,10 +76,10 @@ html[data-theme="light"]::-webkit-scrollbar-track {
     background: #ffffff;
 }
 
-// .navbar {
-//     background-color: rgba(0, 0, 0, 0.1);
-//     box-shadow: none;
-// }
+.navbar {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+}
 
 .button,
 button {

@@ -35,10 +35,8 @@ function Footer(props) {
                 <p>{beian}</p>
                 <p>
                     Made with <i className="fa fa-heart throb" style={{ color: "#d43f57" }} />
-                    <span itemProp="copyrightHolder">
-                        &nbsp;by
-                        <span className="author">{author}.</span>
-                    </span>
+                    <span className="copyrightHolder">by</span>
+                    <span className="author">{author}.</span>
                 </p>
             </div>
         </footer>

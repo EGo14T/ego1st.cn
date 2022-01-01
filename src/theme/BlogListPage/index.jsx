@@ -11,7 +11,6 @@ function BlogListPage(props) {
     const { metadata, items, history } = props;
     const { page, totalPages } = metadata;
     const { previousPage, nextPage } = metadata;
-
     const { siteConfig } = useDocusaurusContext();
     const { customFields } = siteConfig;
     const { header_bg } = customFields;

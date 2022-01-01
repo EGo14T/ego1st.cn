@@ -1,15 +1,15 @@
-import React, { useEffect, useRef, useLayoutEffect } from "react";
-import { MDXProvider } from "@mdx-js/react";
-import MDXComponents from "@theme/MDXComponents";
-import Link from "@docusaurus/Link";
-import Main from "../Main";
-import CountView from "../../components/CountView";
+import React, { useEffect, useRef, useLayoutEffect } from 'react';
+import { MDXProvider } from '@mdx-js/react';
+import MDXComponents from '@theme/MDXComponents';
+import Link from '@docusaurus/Link';
+import Main from '../Main';
+import CountView from '../../components/CountView';
 
-import { usePluginData } from "@docusaurus/useGlobalData";
+import { usePluginData } from '@docusaurus/useGlobalData';
 
 function BlogPostItem(props) {
     const { children, metadata, isBlogPostPage = false, toc, frontMatter } = props;
-    const { date, permalink, tags, title, words } = metadata;
+    const { date, permalink, tags, title, readingTime } = metadata;
     const { slug } = frontMatter;
     const tag = tags[0];
     const { permalink: tagLink, label } = tag;
@@ -22,7 +22,7 @@ function BlogPostItem(props) {
 
     const handleOpenItem = () => {
         if (!isBlogPostPage) {
-            document.scrollingElement.scrollTo({ top: 630, behavior: "smooth" });
+            document.scrollingElement.scrollTo({ top: 630, behavior: 'smooth' });
             setTimeout(() => {
                 props.history.push(permalink);
             }, 500);
@@ -42,7 +42,7 @@ function BlogPostItem(props) {
         return (
             <div className="post-badge">
                 <span>
-                    <Link to={tagLink}>{label}</Link>
+                    <Link>{label}</Link>
                 </span>
             </div>
         );
@@ -69,7 +69,7 @@ function BlogPostItem(props) {
                             <i className="fa fa-file-word-o"></i>
                         </span>
                         <span className="post-meta-item-text">文章字数</span>
-                        <span title="文章字数">{words}</span>
+                        <span title="文章字数">{readingTime}</span>
                     </span>
 
                     <span className="post-vistors">
@@ -79,7 +79,7 @@ function BlogPostItem(props) {
                         </span>
                         <span className="post-meta-item-text">被</span>
                         {/* 统计访客数 */}
-                        <CountView isBlogPostPage={isBlogPostPage} title={title} url={permalink} {...props}/>
+                        <CountView isBlogPostPage={isBlogPostPage} title={title} url={permalink} {...props} />
                         <span className="post-meta-item-text">人看爆</span>
                     </span>
                 </div>

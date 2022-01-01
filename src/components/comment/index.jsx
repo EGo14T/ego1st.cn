@@ -101,7 +101,8 @@ export default function Comment(props) {
                     </div>
                 </div>
             </div>
-            <CommentList />
+            {/* <CommentList /> */}
+            评论功能开发中...
         </div>
     );
 }

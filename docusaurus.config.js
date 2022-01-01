@@ -1,4 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+
+const myReadingTime = require('./src/js/readingTime').myReadingTime;
+
 module.exports = {
     title: "ego1st",
     tagline: "Dinosaurs are cool",
@@ -66,7 +69,7 @@ module.exports = {
 
     stylesheets: [
         {
-          href: '/font/caroline.css',
+          href: '/font/Caroline.css',
           type: 'text/css',
         },
       ],
@@ -76,18 +79,17 @@ module.exports = {
             "@docusaurus/preset-classic",
             {
                 docs: false,
-                blog: false,
-                // blog: {
-                //     path: "./blog",
-                //     routeBasePath: "/",
-                //     blogSidebarTitle: "近期文章",
-                //     postsPerPage: 5,
-                //     feedOptions: {
-                //       type: 'atom',
-                //       copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,
-                //     },
-                // },
-
+                blog: {
+                    path: "./blog",
+                    routeBasePath: "/",
+                    blogSidebarTitle: "近期文章",
+                    postsPerPage: 6,
+                    feedOptions: {
+                        type: "atom",
+                        copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,
+                    },
+                    readingTime: ({content}) => myReadingTime(content),
+                },
                 theme: {
                     customCss: require.resolve("./src/css/custom.scss"),
                 },
@@ -97,18 +99,5 @@ module.exports = {
     plugins: [
         "docusaurus-plugin-sass",
         "./src/plugins/fontAwesome",
-        [
-            "./src/plugins/docusaurus-plugin-blog-interceptor",
-            {
-                path: "./blog",
-                routeBasePath: "/",
-                blogSidebarTitle: "近期文章",
-                postsPerPage: 10,
-                feedOptions: {
-                    type: "atom",
-                    copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`,
-                },
-            },
-        ],
     ],
 };

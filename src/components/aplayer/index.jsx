@@ -7,7 +7,7 @@ function EAplayer(props) {
     const aplayerElm = useRef();
 
     useEffect(() => {
-        const APlayer = require('APlayer');
+        const APlayer = require('./APlayer.min.js');
         const axios = require('axios');
         axios.get(api).then((res) => {
             new APlayer({

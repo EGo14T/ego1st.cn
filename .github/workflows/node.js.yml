@@ -16,6 +16,5 @@ jobs:
           cache: yarn
       - name: Build website
         run: |
-          echo $(ls)
           yarn install --frozen-lockfile
           yarn build

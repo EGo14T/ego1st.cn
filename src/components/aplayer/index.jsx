@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import 'APlayer/dist/APlayer.min.css';
+import './APlayer.min.css';
 
 function EAplayer(props) {
     const { songid } = props;

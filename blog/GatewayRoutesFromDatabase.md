@@ -11,11 +11,11 @@ tags: [SpringCloud,学习笔记]
 
 ### yml配置文件
 
-![image-20201116172741310](http://cdn.ego1st.cn//postImg/image-20201116172741310.png)
+![image-20201116172741310](https://cdn.ego1st.cn//postImg/image-20201116172741310.png)
 
 ### @Configuration
 
-![image-20201116172929915](http://cdn.ego1st.cn//postImg/image-20201116172929915.png)
+![image-20201116172929915](https://cdn.ego1st.cn//postImg/image-20201116172929915.png)
 
 ## 路由初始化
 
@@ -41,7 +41,7 @@ public class RouteDefinition {
 
 一个路由配置就是一个`RouteDefinition`对象，一个`RouteDefinition`对应一个ID，如果不设置，默认为uuid，所有路由信息在系统启动的时候被加载进内存里
 
-![image-20201116173926638](http://cdn.ego1st.cn//postImg/image-20201116173926638.png)
+![image-20201116173926638](https://cdn.ego1st.cn//postImg/image-20201116173926638.png)
 
 如图框住的部分就是加载yml文件，它返回`PropertiesRouteDefinitionLocator`对象，该对象实现`RouteDefinitionLocator`接口，该接口是路由的装载器
 
@@ -55,7 +55,7 @@ public interface RouteDefinitionLocator {
 
 该接口只有一个方法，就是获取路由配置，该接口有多个实现类，分别对应不同的配置路由的方式
 
-![image-20201116174349683](http://cdn.ego1st.cn//postImg/image-20201116174349683.png) 
+![image-20201116174349683](https://cdn.ego1st.cn//postImg/image-20201116174349683.png) 
 
 1. CachingRouteDefinitionLocator -RouteDefinitionLocator包装类， 缓存目标RouteDefinitionLocator 为routeDefinitions提供缓存功能 
 2. CompositeRouteDefinitionLocator -RouteDefinitionLocator包装类，组合多种 RouteDefinitionLocator 的实现，为 routeDefinitions提供统一入口

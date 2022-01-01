@@ -1,12 +1,12 @@
-name: ego1st deployment
+name: Deploy ego1st blog
 
 on:
-  pull_request:
-    branches: [prod]
+  push:
+    branches: [dev]
 
 jobs:
-  test-deploy:
-    name: ego1st deployment
+  deploy:
+    name: Deploy ego1st blog
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,7 +14,8 @@ jobs:
         with:
           node-version: 14.x
           cache: yarn
-      - name: ego1st build
+      - name: Build website
+        working-directory: website
         run: |
           yarn install --frozen-lockfile
           yarn build

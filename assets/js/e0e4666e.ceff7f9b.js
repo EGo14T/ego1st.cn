@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkego_1st_cn=self.webpackChunkego_1st_cn||[]).push([[4665],{6482:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","slug":"/tags/my-sql","name":"MySql","count":1,"permalink":"/tags/my-sql"}')}}]);

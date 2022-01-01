@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkego_1st_cn=self.webpackChunkego_1st_cn||[]).push([[4199],{1806:function(s){s.exports=JSON.parse('{"allTagsPath":"/tags","slug":"/tags/\u788e\u788e\u5ff5","name":"\u788e\u788e\u5ff5","count":1,"permalink":"/tags/\u788e\u788e\u5ff5"}')}}]);

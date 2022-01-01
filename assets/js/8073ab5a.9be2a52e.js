@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkego_1st_cn=self.webpackChunkego_1st_cn||[]).push([[976],{6835:function(e){e.exports=JSON.parse('{"allTagsPath":"/tags","slug":"/tags/leet-code","name":"LeetCode","count":1,"permalink":"/tags/leet-code"}')}}]);

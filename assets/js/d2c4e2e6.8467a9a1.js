@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkego_1st_cn=self.webpackChunkego_1st_cn||[]).push([[5097],{6086:function(e){e.exports=JSON.parse('{"allTagsPath":"/tags","slug":"/tags/vue","name":"Vue","count":5,"permalink":"/tags/vue"}')}}]);

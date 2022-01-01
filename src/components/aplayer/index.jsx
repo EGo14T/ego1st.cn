@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import 'APlayer/dist/APlayer.min.css';
 
 function EAplayer(props) {
-    const { songId } = props;
-    const api = `https://api.i-meto.com/meting/api?server=netease&type=song&id=${songId}`;
+    const { songid } = props;
+    const api = `https://api.i-meto.com/meting/api?server=netease&type=song&id=${songid}`;
     const aplayerElm = useRef();
 
     useEffect(() => {

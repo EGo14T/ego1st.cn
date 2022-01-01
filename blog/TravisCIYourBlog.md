@@ -121,7 +121,7 @@ $ git init blog.git --bare # 创建仓库目录
 ### 配置TravisCI
 
 #### 使用Github账号登陆TravisCI
-[TravisCi]([https://travis-ci.org]),注意网站地址结尾是org（公开的），com结尾的是私有的，是收费的
+[TravisCi](https://travis-ci.org),注意网站地址结尾是org（公开的），com结尾的是私有的，是收费的
 
 #### 添加你的仓库
 ![](https://cdn.ego1st.cn/postImg/Snipaste_2019-08-14_17-19-07.jpg)

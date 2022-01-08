@@ -1,5 +1,5 @@
 .footer {
-    background: #232323;
+    background: rgba($color: #000000, $alpha: 0.9);
     padding: 15px 0 40px 0;
     text-align: center;
     color: #888;
@@ -16,7 +16,7 @@
     }
 
     .footer-image {
-        background: url(https://cdn.ego1st.cn/themeImg/cat.png) no-repeat 50%;
+        background: url(https://cdn.ego1st.cn/themeImg/cat.webp) no-repeat 50%;
         background-size: 500px;
         height: 315px;
         z-index: 1;
@@ -27,7 +27,7 @@
     }
 
     .author {
-        font-family: "Caroline", sans-serif;
+        font-family: 'Caroline', sans-serif;
         font-size: 20px;
     }
 

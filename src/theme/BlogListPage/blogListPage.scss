@@ -58,7 +58,7 @@
 .pagination {
   margin: 20px 0;
   border-top: none;
-  background: #fff;
+  background: var(--ifm-color-post);
   padding: 15px 0;
   border-radius: 5px;
   text-align: center;
@@ -74,10 +74,10 @@
 }
 
 .page-number {
-  background: #fff;
-  color: #97dffd;
+  background: var(--ifm-color-post);
+  color: var(--ifm-color-page-number);
   border-radius: 5px;
-  border: 1px solid #97dffd;
+  border: 1px solid var(--ifm-color-item);
   text-decoration: none;
   cursor: pointer;
 }
@@ -92,16 +92,16 @@
 }
 
 .pagination .page-number:hover {
-  background: #97dffd;
-  color: #fff;
-  border-top-color: #97dffd;
+  background: var(--ifm-color-item);
+  color: var(--ifm-color-font);
+  border-top-color: var(--ifm-color-item);
   text-decoration: none;
 }
 
 .current {
-  color: #fff;
-  background: #97dffd;
-  border: 1px solid #97dffd;
+  color: var(--ifm-color-font);
+  background: var(--ifm-color-item);
+  border: 1px solid var(--ifm-color-item);
 }
 
 .fa-angle-left:before {

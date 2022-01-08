@@ -4,7 +4,7 @@
     position: relative;
     padding: 20px;
     padding-right: 40px;
-    background: #fff;
+    background: var(--ifm-color-post);
     margin-bottom: 40px;
     border-radius: 5px;
 }
@@ -34,9 +34,8 @@
 }
 
 .input-box {
-    background: #fff;
+    background: var(--ifm-color-bg);
     transition: all 0.3s;
-    background-color: #f4f5f5;
     border: 1px solid #f4f5f5;
     border-radius: 2px;
     word-break: break-word;
@@ -86,7 +85,7 @@
         font-size: 14px;
         line-height: 36px;
         border-radius: 2px;
-        color: #fff;
+        color: var(--ifm-color-font);
         padding: 0;
         cursor: pointer;
     }
@@ -245,3 +244,19 @@
     color: #6b6b6b;
     font-size: 10px;
 }
+
+// .button,
+// button {
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     appearance: none;
+//     background-color: #007fff;
+//     color: var(--ifm-color-font);
+//     border-radius: 2px;
+//     border: none;
+//     padding: 0.5rem 1.3rem;
+//     outline: none;
+//     transition: background-color 0.3s, color 0.3s;
+//     cursor: pointer;
+//     border: none;
+// }

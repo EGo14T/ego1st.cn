@@ -22,7 +22,7 @@ button[data-balloon] {
       font-size: 12px !important;
       background: rgba(17, 17, 17, 0.9);
       border-radius: 4px;
-      color: #fff;
+      color: var(--ifm-color-font);
       content: attr(data-balloon);
       padding: .5em 1em;
       position: absolute;

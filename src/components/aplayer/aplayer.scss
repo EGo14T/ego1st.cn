@@ -1,3 +1,12 @@
 .aplayer {
     margin-bottom: 20px !important;
+    background-color: var(--ifm-color-post) !important;
+    box-shadow: var(--ifm-shadow-aplayer) !important;
+    .aplayer-lrc:before {
+        background: none !important;
+    }
+
+    .aplayer-lrc:after {
+        background: none !important;
+    }
 }

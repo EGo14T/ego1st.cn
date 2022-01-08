@@ -1,7 +1,6 @@
 .sidebar {
     float: right;
     margin: 0 0 40px 0;
-    background: #fff;
     border-radius: 5px;
     transform: none;
     position: sticky;
@@ -14,8 +13,8 @@
     padding: 20px;
     box-sizing: border-box;
     width: 100%;
-    color: #555;
-    background: #fff;
+    color: var(--ifm-font-color-base);
+    background: var(--ifm-color-post);
     box-shadow: initial;
     border-radius: initial;
     border-radius: 5px;
@@ -34,14 +33,14 @@
             border-bottom: 1px solid transparent;
 
             &:hover {
-                color: #fc6423;
+                color: var(--ifm-color-active);
             }
         }
     }
 
     .sidebar-nav-active {
-        color: #fc6423;
-        border-bottom-color: #fc6423 !important;
+        color: var(--ifm-color-active);
+        border-bottom-color: var(--ifm-color-active) !important;
     }
 }
 
@@ -62,7 +61,7 @@
         height: 42px;
         line-height: 42px;
         border-radius: 42px;
-        color: rgba(0, 0, 0, 0.5);
+        color: var(--ifm-color-title);
         background-color: rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease-in-out;
         font-style: normal;
@@ -88,8 +87,8 @@
     }
 
     a:hover .fa {
-        background: #97dffd;
-        color: #fff;
+        background: var(--ifm-color-item);
+        color: var(--ifm-color-font);
     }
 }
 
@@ -116,7 +115,7 @@
     margin: 5px;
     font-size: 14px;
     font-weight: 700;
-    color: #555;
+    color: var(--ifm-color-title);
     cursor: default;
 }
 

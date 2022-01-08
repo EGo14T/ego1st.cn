@@ -1,13 +1,13 @@
 .post {
     position: relative;
     padding: 40px;
-    background: #fff;
+    background: var(--ifm-color-post);
     margin-bottom: 40px;
     border-radius: 5px;
 }
 
 .post-date {
-    background-color: #97dffd;
+    background-color: var(--ifm-color-item);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     position: absolute;
     top: -20px;
@@ -16,7 +16,7 @@
     width: 70px;
     padding-top: 10px;
     border-radius: 100px;
-    color: #fff;
+    color: var(--ifm-color-font);
     text-align: center;
     line-height: 1.1;
 
@@ -32,7 +32,7 @@
     top: 105px;
     border-color: #47456d;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    background-color: #97dffd;
+    background-color: var(--ifm-color-item);
     margin: 5px 0 15px 2px;
     font-size: 14px;
     border-radius: 0 4px 4px 0;
@@ -41,7 +41,7 @@
     line-height: 1;
 
     a {
-        color: #fff;
+        color: var(--ifm-color-font);
         text-decoration: none;
     }
 }
@@ -69,7 +69,7 @@
 }
 
 .post-title {
-    color: #444;
+    color: var(--ifm-color-title);
     font-size: 25px;
     font-weight: 700;
     text-align: center;
@@ -78,25 +78,24 @@
 }
 
 .post-meta {
-    color: #555;
+    color: var(--ifm-color-title);
     margin-top: 5px;
     margin: 3px 0 60px;
-    color: #999;
     font-family: pingfang sc, microsoft yahei, Lato, sans-serif;
     font-size: 12px;
     text-align: center;
 
-    .post-time {
-        color: #00a7e0;
-    }
+    // .post-time {
+    //     color: #00a7e0;
+    // }
 
-    .post-wordcount {
-        color: #000;
-    }
+    // .post-wordcount {
+    //     color: #000;
+    // }
 
-    .post-vistors {
-        color: #ff3f1a;
-    }
+    // .post-vistors {
+    //     color: #ff3f1a;
+    // }
 
     .post-meta-divider {
         margin: 0 0.5em;
@@ -110,18 +109,18 @@
 .post-button {
     margin-top: 40px;
     a {
-        color: #fff;
+        color: var(--ifm-color-font);
     }
 
     a:hover {
-        color: #fff;
+        color: var(--ifm-color-font);
         text-decoration: none;
     }
 }
 
 .btn {
-    background: #97dffd;
-    color: #fff;
+    background: var(--ifm-color-item);
+    color: var(--ifm-color-font);
     font-size: 13px;
     padding: 1px 15px;
     border-radius: 5px;

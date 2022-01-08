@@ -36,6 +36,7 @@ module.exports = {
 
     // 自定义配置
     customFields: {
+        version: 0.1.9
         header_bg: {
             light: "/img/wallhaven-light.png",
             dark: "/img/wallhaven-dark.png",

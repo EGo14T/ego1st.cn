@@ -5,7 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 function Footer(props) {
     const { siteConfig } = useDocusaurusContext();
     const { customFields } = siteConfig;
-    const { footer } = customFields;
+    const { footer, version } = customFields;
     const { since, author, beian } = footer;
 
     const [count, setCount] = useState(showDateTime(since));
@@ -30,7 +30,7 @@ function Footer(props) {
                     <a className="a-footer" href="https://hexo.io/" target="_blank" className="external" rel="nofollow">
                         Docusaurus
                     </a>
-                    <span> 强力驱动.v0.1.8</span>
+                    <span> 强力驱动.v{version}</span>
                 </p>
                 <p>{beian}</p>
                 <p>

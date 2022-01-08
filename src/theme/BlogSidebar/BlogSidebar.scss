@@ -61,7 +61,7 @@
         height: 42px;
         line-height: 42px;
         border-radius: 42px;
-        color: var(--ifm-color-title);
+        color: var(--ifm-font-color-base);
         background-color: rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease-in-out;
         font-style: normal;
@@ -115,7 +115,7 @@
     margin: 5px;
     font-size: 14px;
     font-weight: 700;
-    color: var(--ifm-color-title);
+    color: var(--ifm-font-color-base);
     cursor: default;
 }
 

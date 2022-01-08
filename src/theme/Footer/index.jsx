@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { showDateTime } from "../../js/since";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import React, { useEffect, useState } from 'react';
+import { showDateTime } from '../../js/since';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 function Footer(props) {
     const { siteConfig } = useDocusaurusContext();
@@ -26,15 +26,15 @@ function Footer(props) {
                     <span className="my-face">ฅʕ•̫͡•ʔฅ</span>
                 </p>
                 <p>
-                    © <span itemProp="copyrightYear">2021</span>. 由{" "}
+                    © <span itemProp="copyrightYear">2021</span>. 由{' '}
                     <a className="a-footer" href="https://hexo.io/" target="_blank" className="external" rel="nofollow">
                         Docusaurus
                     </a>
-                    <span> 强力驱动.</span>
+                    <span> 强力驱动.v0.1.8</span>
                 </p>
                 <p>{beian}</p>
                 <p>
-                    Made with <i className="fa fa-heart throb" style={{ color: "#d43f57" }} />
+                    Made with <i className="fa fa-heart throb" style={{ color: '#d43f57' }} />
                     <span className="copyrightHolder">by</span>
                     <span className="author">{author}.</span>
                 </p>

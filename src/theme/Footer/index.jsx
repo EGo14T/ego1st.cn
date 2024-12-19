@@ -32,7 +32,7 @@ function Footer(props) {
                     </a>
                     <span> 强力驱动.v{version}</span>
                 </p>
-                <p>{beian}</p>
+                <a href="https://beian.miit.gov.cn">{beian}</a>
                 <p>
                     Made with <i className="fa fa-heart throb" style={{ color: '#d43f57' }} />
                     <span className="copyrightHolder">by</span>

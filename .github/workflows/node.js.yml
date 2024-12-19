@@ -18,7 +18,7 @@ jobs:
           yarn
           yarn build
       - name: Deploy ego1st.cn
-      - uses: peaceiris/actions-github-pages@v3.1.12
+        uses: peaceiris/actions-github-pages@v3.1.12
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             publish_dir: ./build
